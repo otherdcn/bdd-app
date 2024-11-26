@@ -16,7 +16,7 @@ blocks:
             - 'bin/rails db:test:prepare'
         - name: RSpec Tests
           commands:
-            - bundle exec rspec
+            - rspec
         - name: Cucumber Tests
           commands:
-            - bundle exec cucumber
+            - cucumber
