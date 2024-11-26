@@ -50,7 +50,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 7.0.0'
   gem "cucumber-rails", "~> 3.1", require: false
   gem 'shoulda-matchers', '~> 6.0'
-  gem "factory_bot", "~> 6.5"
+  gem "factory_bot_rails", "~> 6.4"
 end
 
 group :development do
@@ -71,4 +71,9 @@ group :test do
   gem 'database_cleaner-active_record'
   gem 'rails-controller-testing'
 end
+
+
+gem "devise", "~> 4.9"
+
+gem "email_spec", "~> 2.3"
 

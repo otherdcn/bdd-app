@@ -4,8 +4,9 @@
 # instead of editing this one. Cucumber will automatically load all features/**/*.rb
 # files.
 
-
 require 'cucumber/rails'
+require 'email_spec'
+require 'email_spec/cucumber'
 
 # By default, any exception happening in your Rails application will bubble up
 # to Cucumber so that your scenario will fail. This is a different from how
