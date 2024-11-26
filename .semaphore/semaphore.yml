@@ -1,0 +1,22 @@
+version: v1.0
+name: Test MyApp
+agent:
+  machine:
+    type: f1-standard-2
+    os_image: ubuntu2204
+blocks:
+  - name: Setup
+    dependencies: []
+    task:
+      jobs:
+        - name: Setup
+          commands:
+            - bin/bundle install
+            - 'bin/rails db:setup'
+            - 'bin/rails db:test:prepare'
+        - name: RSpec Tests
+          commands:
+            - bundle exec rspec
+        - name: Cucumber Tests
+          commands:
+            - bundle exec cucumber
